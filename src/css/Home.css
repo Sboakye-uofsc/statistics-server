@@ -1,0 +1,52 @@
+#main-page-quotes {
+	display: flex;
+	flex: 2;
+	flex-wrap: wrap;
+}
+
+.quotes {
+	flex: 1;
+    flex-direction: column;
+    gap: 20px;
+	margin: auto;
+	margin-left: 6%;
+	width: 40%;
+
+	position: absolute;
+	bottom: 20%;
+	h2{font-size: 50px; color: white; font-family:Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif; font-weight: 600;}
+	p{color:white; font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;}
+}
+
+#stat-right-side {
+	flex: 1;
+    display: flex;
+	flex-wrap: wrap;
+}
+
+.circle {
+	width: 200px; 
+	height: 200px; 
+	background-color: #9ccfcb;
+	border-radius: 50%;
+
+	position: absolute;
+	bottom: 35%;
+	right: 7%;
+}
+
+/*Backgound*/
+.home-container {
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+	background: linear-gradient(135deg, #667eea75 0%, #764ba27a 25%, #f193fb70 50%, #f5576c69 75%, #fec9576b 100%);
+	background-size: 400% 400%;
+	animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

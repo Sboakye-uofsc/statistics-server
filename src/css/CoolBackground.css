@@ -1,0 +1,14 @@
+.background {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	background: linear-gradient(135deg, #667eea75 0%, #764ba27a 25%, #f193fb70 50%, #f5576c69 75%, #fec9576b 100%);
+	background-size: 400% 400%;
+	animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

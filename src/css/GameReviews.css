@@ -1,0 +1,55 @@
+#title-reviews {
+	position: absolute;
+	bottom: 45%;
+	right: 39%;
+	font-size: 50px;
+	color: white;
+}
+
+/*Nav - reviews*/
+#review-nav {
+	padding-top: 5%;
+}
+
+.reviews {
+	gap: 3.5%;
+	display: flex;
+	list-style-type: none;
+}
+
+.reviews a {
+	text-decoration: none;
+	color: rgb(236, 224, 255);
+	font-size: 140%;
+}
+
+/**/
+#game-row {
+	padding-top: 3%;
+	h2{font-size: 150%;}
+}
+
+#game-row-background {
+	position: relative;
+	background: #1a1027;
+	border-radius: 3%;
+	padding: 3%;
+}
+
+#arrow-prev, #arrow-next {
+    position:absolute;
+    background:#3722527e;
+    color: white;
+    text-decoration: none;
+    font-size:3em;
+	bottom: -10%;
+    
+}
+
+#arrow-prev {
+    left:2%;
+}
+
+#arrow-next {
+    right:2%;
+}

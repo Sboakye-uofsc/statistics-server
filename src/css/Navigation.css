@@ -1,0 +1,37 @@
+/* -----Structure----- */
+#main-nav {
+	width: 100%;
+	margin-top: 1.8%;
+}
+
+.columns {
+	gap: 3.5%;
+	display: flex;
+	list-style-type: none;
+}
+
+.columns a {
+	text-decoration: none;
+	color: rgb(236, 224, 255);
+	font-size: 140%;
+	font-family: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
+	font-weight: 600;
+}
+
+/* -----Animation----- */
+.columns-nav li :hover{ /*Animation is not working*/
+	opacity: 0.6;
+  	transition: 0.3s;
+	height: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+	.columns {
+		position: relative;
+
+		right: 14%;
+		text-align: center;
+		flex-direction: column;
+		padding-top: 20%;
+	}
+}
