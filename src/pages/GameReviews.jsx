@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom";
 import CoolBackground from "./CoolBackground";
 import Peak from "../img/peak.png";
+import Castle from "../img/castle.png";
+import Rivals from "../img/rivals.png";
 import "./../css/GameReviews.css"
 
 const GameReviews = () => {
@@ -25,10 +27,13 @@ const GameReviews = () => {
 				<div id="game-row">
 					<h2>Placeholder</h2>
 					<div id="game-row-background">
-						<img id="peak" src={Peak} alt="Peak" />
+						<img id="gamepic" src={Peak} alt="Peak" />
+						<img id="gamepic" src={Castle} alt="Castle" />
+						<img id="gamepic" src={Rivals} alt="Rivals" />
+
+						<Link to="#" id="arrow-prev">&lt;</Link>
+						<Link to="#" id="arrow-next">&gt;</Link>
 					</div>
-					<Link to="#" id="arrow-prev">&lt;</Link>
-					<Link to="#" id="arrow-next">&gt;</Link>
 				</div>
 			</div>
 		</main>

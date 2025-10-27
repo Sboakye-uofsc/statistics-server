@@ -1,7 +1,7 @@
 #title-reviews {
 	position: absolute;
-	bottom: 45%;
-	right: 39%;
+	bottom: 27%;
+	right: 37%;
 	font-size: 50px;
 	color: white;
 }
@@ -11,10 +11,15 @@
 	padding-top: 5%;
 }
 
+
 .reviews {
-	gap: 3.5%;
+	width: 41%;
+	gap: 7%;
 	display: flex;
 	list-style-type: none;
+	padding: 2%;
+	background: #1a1027;
+	border-radius: 38%;
 }
 
 .reviews a {
@@ -26,7 +31,7 @@
 /**/
 #game-row {
 	padding-top: 3%;
-	h2{font-size: 150%;}
+	h2{font-size: 200%;color: white; padding-left: 3%;}
 }
 
 #game-row-background {
@@ -38,18 +43,48 @@
 
 #arrow-prev, #arrow-next {
     position:absolute;
-    background:#3722527e;
+    background:#7b53af7e;
     color: white;
     text-decoration: none;
     font-size:3em;
-	bottom: -10%;
-    
 }
 
 #arrow-prev {
     left:2%;
+	top: 42%;
 }
 
 #arrow-next {
     right:2%;
+	top: 42%;
+}
+
+#gamepic {
+	width: 25%;
+	padding-left: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+	#title-reviews {
+		bottom: 6%;
+		right: 20%;
+	}
+
+	#gamepic {
+		display: flex;
+		flex-wrap: wrap;
+		min-width: 70%;
+		margin: auto;
+		flex-direction: row;
+	}
+
+	#arrow-prev {
+    	left:2%;
+		top: 100%;
+	}
+
+	#arrow-next {
+    	right:2%;
+		top: 100%;
+	}
 }
