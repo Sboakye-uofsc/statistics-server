@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/server-sbUofsc/static/css/main.322f76f1.css",
-    "main.js": "/server-sbUofsc/static/js/main.14e97c2d.js",
-    "static/media/peak.png": "/server-sbUofsc/static/media/peak.b8a490eb7de0c28da7c8.png",
-    "index.html": "/server-sbUofsc/index.html",
-    "main.322f76f1.css.map": "/server-sbUofsc/static/css/main.322f76f1.css.map",
-    "main.14e97c2d.js.map": "/server-sbUofsc/static/js/main.14e97c2d.js.map"
+    "main.css": "/statistics-server/static/css/main.322f76f1.css",
+    "main.js": "/statistics-server/static/js/main.5ff5320c.js",
+    "static/media/peak.png": "/statistics-server/static/media/peak.b8a490eb7de0c28da7c8.png",
+    "index.html": "/statistics-server/index.html",
+    "main.322f76f1.css.map": "/statistics-server/static/css/main.322f76f1.css.map",
+    "main.5ff5320c.js.map": "/statistics-server/static/js/main.5ff5320c.js.map"
   },
   "entrypoints": [
     "static/css/main.322f76f1.css",
-    "static/js/main.14e97c2d.js"
+    "static/js/main.5ff5320c.js"
   ]
 }
