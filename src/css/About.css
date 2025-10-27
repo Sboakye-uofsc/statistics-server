@@ -1,0 +1,23 @@
+.aboutme{
+	flex: 2;
+	flex-direction: row;
+	padding: 3%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#map-info, #about-info{
+	padding-top: 10%;
+	flex-wrap: wrap;
+	width: 57%;
+	h2{color: white;}
+	p{color: white;}
+}
+
+.map {
+	width: 500px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3%;
+	margin-left: 10%;
+}

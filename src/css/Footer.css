@@ -1,0 +1,6 @@
+#thefooter {
+	flex: 3;
+	display: flex;
+	flex-wrap: wrap;
+	border-top: 2px solid black;
+}
