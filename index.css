@@ -1,0 +1,6 @@
+body {
+	height: 600px;
+	background-size: 400% 400%;
+  	background-color: rgb(171, 72, 190); /* For browsers that do not support gradients */
+	background-image: linear-gradient(to bottom right, rgb(66, 36, 89), rgb(19, 10, 37));
+}
