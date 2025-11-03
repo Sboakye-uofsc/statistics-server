@@ -1,16 +1,17 @@
 /* -----Structure----- */
 #main-nav {
 	width: 100%;
-	margin-top: 1.8%;
+	margin-top: 3%;
+	padding-left: 2%;
 }
 
-.columns {
+#columns {
 	gap: 3.5%;
 	display: flex;
 	list-style-type: none;
 }
 
-.columns a {
+#columns a {
 	text-decoration: none;
 	color: rgb(236, 224, 255);
 	font-size: 140%;
@@ -26,12 +27,24 @@
 }
 
 @media only screen and (max-width: 768px) {
-	.columns {
-		position: relative;
 
+	#toggle-nav div {
+		width:25px;
+		height:2px;
+		background-color:rgb(255, 255, 255);
+		margin:6px 0;
+	}
+
+	#columns {
+		position: relative;
 		right: 14%;
 		text-align: center;
 		flex-direction: column;
 		padding-top: 20%;
 	}
+
+	#columns.hide-small {
+    display: none;
+  	}
+
 }

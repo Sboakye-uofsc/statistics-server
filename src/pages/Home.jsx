@@ -1,19 +1,22 @@
 import "./../css/Home.css"
+import Home2 from './Home2';
+
 const Home = () => {
      return (
        <main>
-			<div class="home-container">
+			<div className="home-container">
 				<div id="main-page-quotes">
-					<section class="quotes">
+					<section className="quotes">
 						<h2>Where Statistics Meets Gaming</h2>
 						<p> A public gaming statistics platform that tracks and analyzes player habits across various games. View the latest percentages and graphs for all your favorite video games.</p>
 					</section>
 
-					<div class="stat-right-side">
-						<div class="circle"></div>
+					<div className="stat-right-side">
+						<div className="circle"></div>
 					</div>
 				</div>
 			</div>
+			<Home2 />
        </main>
      );
    };

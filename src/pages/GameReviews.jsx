@@ -1,3 +1,4 @@
+import HorizSlideshow from "./../components/HorizSlideshow";
 import {Link} from "react-router-dom";
 import CoolBackground from "./CoolBackground";
 import Peak from "../img/peak.png";
@@ -34,6 +35,8 @@ const GameReviews = () => {
 						<Link to="#" id="arrow-prev">&lt;</Link>
 						<Link to="#" id="arrow-next">&gt;</Link>
 					</div>
+
+					<HorizSlideshow />
 				</div>
 			</div>
 		</main>

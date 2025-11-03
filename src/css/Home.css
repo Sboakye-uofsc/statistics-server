@@ -13,7 +13,7 @@
 	width: 40%;
 
 	position: absolute;
-	bottom: 20%;
+	bottom: 27%;
 	h2{font-size: 50px; color: white; font-family:Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif; font-weight: 600;}
 	p{color:white; font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;}
 }
@@ -34,12 +34,36 @@
 	bottom: 35%;
 	right: 7%;
 }
+/*section 2 of home*/
+.home-gameplay {  /* Changed from # to . */
+	flex: 2;
+	width: 100%;
+	display: flex;
+	flex-direction: row; 
+	flex-wrap: wrap;
+	gap: 20px;  
+}
+
+.h2-home{
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	padding-top: 20%;
+	padding-left: 15%;
+	color: white;
+}
+
+.h2-chart{
+	display: flex;
+	flex-wrap: wrap;
+	img{width: 600px;}
+}
 
 /*Backgound*/
 .home-container {
 	position: relative;
 	height: 500px;
-	overflow: hidden;
+	overflow: visible;
 	background: linear-gradient(135deg, #667eea75 0%, #764ba27a 25%, #f193fb70 50%, #f5576c69 75%, #fec9576b 100%);
 	background-size: 400% 400%;
 	animation: gradientShift 15s ease infinite;

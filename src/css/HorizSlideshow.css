@@ -1,0 +1,54 @@
+*{
+	font-family:'Poppins', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 1310px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative; 
+	margin: 0; 
+}
+
+.games-reviews {
+	width: 1200px;
+	overflow-x: scroll;
+	scroll-behavior: smooth;
+	img{ width: 300px; height: 150px;} 
+}
+
+.content-box {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+.card {
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#arrow-prev, #arrow-next {
+    position:absolute;
+    background:#7b53af7e;
+    color: white;
+    text-decoration: none;
+    font-size:3em;
+}
+
+#arrow-prev {
+    left:2%;
+	top: 42%;
+}
+
+#arrow-next {
+    right:2%;
+	top: 42%;
+}

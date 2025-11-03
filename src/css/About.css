@@ -21,3 +21,49 @@
 	padding: 3%;
 	margin-left: 10%;
 }
+
+#form{
+	padding-top: 10%;
+	h2 {color: white; width: 300px; margin: auto;}
+}
+
+#contact-form {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 10px;
+	padding-left: 30%;
+}
+
+#message-textarea{
+    min-height: 100px;
+}
+
+#contact-input,
+#message-textarea {
+    width: 60%;
+    padding: 12px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.671);
+    color: rgb(236, 224, 255);
+    font-size: 17px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#message-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#submit {
+    margin: auto;
+    text-align: center;
+    background: rgba(96, 111, 248, 0.589);
+    padding: 17px;
+    border-radius: 13px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
