@@ -1,17 +1,22 @@
 {
   "files": {
-    "main.css": "/statistics-server/static/css/main.805060ab.css",
-    "main.js": "/statistics-server/static/js/main.eb693c01.js",
+    "main.css": "/statistics-server/static/css/main.dd3cf45c.css",
+    "main.js": "/statistics-server/static/js/main.3d14376b.js",
     "static/media/peak.png": "/statistics-server/static/media/peak.b8a490eb7de0c28da7c8.png",
     "static/media/fake.png": "/statistics-server/static/media/fake.ebcb7f293fe9d295ce74.png",
     "static/media/castle.png": "/statistics-server/static/media/castle.f45dd83ecae18be936c1.png",
     "static/media/rivals.png": "/statistics-server/static/media/rivals.0f1c27cee3370df96127.png",
+    "static/media/MB.png": "/statistics-server/static/media/MB.84b743ef3ea2cd70340a.png",
+    "static/media/HW.png": "/statistics-server/static/media/HW.f85592bb1f772c354faf.png",
+    "static/media/DBD.png": "/statistics-server/static/media/DBD.61a3e0b987ac5a09dbe1.png",
+    "static/media/LC.png": "/statistics-server/static/media/LC.fcf6403f2c35c0d0a590.png",
+    "static/media/Copy of StatBoard.png": "/statistics-server/static/media/Copy of StatBoard.b6ea28fc68912626c52d.png",
     "index.html": "/statistics-server/index.html",
-    "main.805060ab.css.map": "/statistics-server/static/css/main.805060ab.css.map",
-    "main.eb693c01.js.map": "/statistics-server/static/js/main.eb693c01.js.map"
+    "main.dd3cf45c.css.map": "/statistics-server/static/css/main.dd3cf45c.css.map",
+    "main.3d14376b.js.map": "/statistics-server/static/js/main.3d14376b.js.map"
   },
   "entrypoints": [
-    "static/css/main.805060ab.css",
-    "static/js/main.eb693c01.js"
+    "static/css/main.dd3cf45c.css",
+    "static/js/main.3d14376b.js"
   ]
 }
