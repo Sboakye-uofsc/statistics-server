@@ -19,6 +19,7 @@ const HorizSlideshow = () => {
 
 	return (
 		<div className="container">
+			<h2>Top Rated</h2>
 			<div className="games-reviews" ref={containerRef}>
 				<div className="content-box">
 					{SAMPLE_DATA.map((item, index) => (
