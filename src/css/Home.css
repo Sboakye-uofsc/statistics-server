@@ -35,7 +35,7 @@
 	right: 7%;
 }
 /*section 2 of home*/
-.home-gameplay {  /* Changed from # to . */
+.home-gameplay { 
 	flex: 2;
 	width: 100%;
 	display: flex;

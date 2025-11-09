@@ -1,3 +1,5 @@
+import React,{ useState, useEffect } from "react";
+import axios from "axios";
 import HorizSlideshow from "./../components/HorizSlideshow";
 import {Link} from "react-router-dom";
 import CoolBackground from "./CoolBackground";
@@ -7,6 +9,21 @@ import Rivals from "../img/rivals.png";
 import "./../css/GameReviews.css"
 
 const GameReviews = () => {
+	const [games, setGames] = useState([]);
+
+	useEffect(()=>{
+		const loadData = async() => {
+			try {
+				const response = await axios.get("http://localhost:3000/api/GameData");
+				setGames(response.data);
+			} catch (err) {
+				console.error("Failed to load game data:", err);
+			}
+		};
+
+		loadData();
+	},[]);
+
 	return (
 		<main>
 			<div>
@@ -15,7 +32,7 @@ const GameReviews = () => {
 
 				<div>
 					<nav id="review-nav">
-						<ul class="reviews">
+						<ul className="reviews">
 							<li><Link to="#">All</Link></li>
 							<li><Link to="#">Adventure</Link></li>
 							<li><Link to="#">Casual</Link></li>
@@ -36,7 +53,7 @@ const GameReviews = () => {
 						<Link to="#" id="arrow-next">&gt;</Link>
 					</div>
 
-					<HorizSlideshow />
+					<HorizSlideshow games={games} />
 				</div>
 			</div>
 		</main>

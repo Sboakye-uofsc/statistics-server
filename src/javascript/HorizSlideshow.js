@@ -13,3 +13,11 @@ export const SAMPLE_DATA = [
   {id: castle},
   {id: peak},
 ];
+
+export const TOP5_DATA = [
+  {id: DBD},
+  {id: HW},
+  {id: LC},
+  {id: castle},
+  {id: peak},
+];
