@@ -44,7 +44,7 @@ const TrendyGames = () => {
 	useEffect(()=>{
 		const loadData = async() => {
 			try {
-				const response = await axios.get("https://your-service-name.onrender.com/api/GameData");
+				const response = await axios.get("https://statistics-backend-jjpb.onrender.com/api/GameData");
 				setGames(response.data);
 			} catch (err) {
 				console.error("Failed to load game data:", err);
