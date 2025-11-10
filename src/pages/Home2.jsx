@@ -16,22 +16,22 @@ const Home2 = () => {
 
 			<section className='featured-games'>
 				<div className='featured-header'>
-					<h2>Featured Games</h2>
-					<p>Explore the most tracked games on our platform</p>
+					<h2>Featured Games Review</h2>
+					<p>See all the review of your favorite games</p>
 				</div>
 				
 				<div className='game-cards'>
 					<div className='game-card'>
-						<h3>Game Title 1</h3>
-						<p>Active Players: 2.5M</p>
+						<h3>Games Review 1</h3>
+						<p>Something go here</p>
 					</div>
 					<div className='game-card'>
-						<h3>Game Title 2</h3>
-						<p>Active Players: 1.8M</p>
+						<h3>Games Review 2</h3>
+						<p>Something go here</p>
 					</div>
 					<div className='game-card'>
-						<h3>Game Title 3</h3>
-						<p>Active Players: 3.2M</p>
+						<h3>Games Review 3</h3>
+						<p>Something go here</p>
 					</div>
             	</div>
         	</section>

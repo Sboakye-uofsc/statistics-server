@@ -62,9 +62,9 @@
     padding-right: 5%; 
 }
 
-featured-games {
-    padding: 80px 10%;
-    background-color: #1a1a2e;
+.featured-games {
+    padding-top: 15%;
+    background-color: #4d3170;
 }
 
 .featured-header {
