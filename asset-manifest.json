@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/statistics-server/static/css/main.15822aae.css",
-    "main.js": "/statistics-server/static/js/main.642dc406.js",
+    "main.css": "/statistics-server/static/css/main.6bbea0e4.css",
+    "main.js": "/statistics-server/static/js/main.e39d5c94.js",
     "static/media/lotgame.jpg": "/statistics-server/static/media/lotgame.da212ae5131a3fbf4f8f.jpg",
     "static/media/peak.png": "/statistics-server/static/media/peak.b8a490eb7de0c28da7c8.png",
     "static/media/fake.png": "/statistics-server/static/media/fake.ebcb7f293fe9d295ce74.png",
@@ -13,11 +13,11 @@
     "static/media/LC.png": "/statistics-server/static/media/LC.fcf6403f2c35c0d0a590.png",
     "static/media/Copy of StatBoard.png": "/statistics-server/static/media/Copy of StatBoard.b6ea28fc68912626c52d.png",
     "index.html": "/statistics-server/index.html",
-    "main.15822aae.css.map": "/statistics-server/static/css/main.15822aae.css.map",
-    "main.642dc406.js.map": "/statistics-server/static/js/main.642dc406.js.map"
+    "main.6bbea0e4.css.map": "/statistics-server/static/css/main.6bbea0e4.css.map",
+    "main.e39d5c94.js.map": "/statistics-server/static/js/main.e39d5c94.js.map"
   },
   "entrypoints": [
-    "static/css/main.15822aae.css",
-    "static/js/main.642dc406.js"
+    "static/css/main.6bbea0e4.css",
+    "static/js/main.e39d5c94.js"
   ]
 }
