@@ -3,6 +3,7 @@ import axios from "axios";
 import HorizSlideshow from "./../components/HorizSlideshow";
 import {Link} from "react-router-dom";
 import CoolBackground from "./CoolBackground";
+import ReviewDetail from "./../components/ReviewDetail";
 import Peak from "../img/peak.png";
 import Castle from "../img/castle.png";
 import Rivals from "../img/rivals.png";
@@ -14,7 +15,7 @@ const GameReviews = () => {
 	useEffect(()=>{
 		const loadData = async() => {
 			try {
-				const response = await axios.get("http://localhost:3000/api/GameData");
+				const response = await axios.get("http://localhost:3001/api/Review");
 				setGames(response.data);
 			} catch (err) {
 				console.error("Failed to load game data:", err);
@@ -45,9 +46,15 @@ const GameReviews = () => {
 				<div id="game-row">
 					<h2>Placeholder</h2>
 					<div id="game-row-background">
-						<img id="gamepic" src={Peak} alt="Peak" />
-						<img id="gamepic" src={Castle} alt="Castle" />
-						<img id="gamepic" src={Rivals} alt="Rivals" />
+						<Link to="/review-detail/1">
+							<img id="gamepic" src={Peak} alt="Peak"/>
+						</Link>
+						<Link to="/review-detail/2">
+							<img id="gamepic" src={Castle} alt="Castle" />
+						</Link>
+						<Link to="/review-detail/4">
+							<img id="gamepic" src={Rivals} alt="Rivals" />
+						</Link>
 
 						<Link to="#" id="arrow-prev">&lt;</Link>
 						<Link to="#" id="arrow-next">&gt;</Link>

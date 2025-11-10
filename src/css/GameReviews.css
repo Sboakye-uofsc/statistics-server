@@ -1,25 +1,28 @@
 #title-reviews {
-	position: absolute;
-	bottom: 40%;
-	right: 37%;
-	font-size: 50px;
-	color: white;
+    position: absolute;
+    bottom: 45%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    font-size: 50px;
+    color: white;
 }
 
 /*Nav - reviews*/
 #review-nav {
-	padding-top: 5%;
+    padding-top: 5%;
+    display: flex; 
+    justify-content: center;
 }
 
-
 .reviews {
-	width: 41%;
-	gap: 7%;
-	display: flex;
-	list-style-type: none;
-	padding: 2%;
-	background: #1a1027;
-	border-radius: 38%;
+    width: 41%;
+    gap: 7%;
+    display: flex;
+    justify-content: space-evenly; /* Changed - better spacing */
+    list-style-type: none;
+    padding: 2%;
+    background: #1a1027;
+    border-radius: 20px; /* Changed from 38% - more modern look */
 }
 
 .reviews a {
@@ -30,8 +33,15 @@
 
 /**/
 #game-row {
-	padding-top: 3%;
-	h2{font-size: 200%;color: white; padding-left: 3%;}
+    padding-top: 5%; /* Changed from 3% - more breathing room */
+    padding-bottom: 3%; /* Added */
+}
+
+#game-row h2 {
+    font-size: 200%;
+    color: white; 
+    padding-left: 5%; /* Changed from 3% - better alignment */
+    margin-bottom: 2%; /* Added */
 }
 
 #game-row-background {
@@ -42,26 +52,31 @@
 }
 
 #arrow-prev, #arrow-next {
-    position:absolute;
-    background:#7b53af7e;
+    position: absolute;
+    background: #7b53af7e;
     color: white;
     text-decoration: none;
-    font-size:3em;
+    font-size: 3em;
+    padding: 10px 20px; /* Added - larger clickable area */
+    border-radius: 10px; /* Added - rounded corners */
 }
 
 #arrow-prev {
-    left:2%;
-	top: 42%;
+    left: 1%; 
+    top: 50%; 
+    transform: translateY(-50%); 
 }
 
 #arrow-next {
-    right:2%;
-	top: 42%;
+    right: 1%; 
+    top: 50%; 
+    transform: translateY(-50%); 
 }
 
 #gamepic {
-	width: 25%;
-	padding-left: 2%;
+    width: 25%;
+    padding-left: 2%;
+    padding-right: 1%; /* Added - space between images */
 }
 
 @media only screen and (max-width: 768px) {
@@ -87,4 +102,69 @@
     	right:2%;
 		top: 100%;
 	}
+}
+
+@media only screen and (max-width: 768px) {
+    #title-reviews {
+        bottom: 50%;
+        left: 50%; 
+        transform: translateX(-50%); 
+        font-size: 35px; 
+        text-align: center;
+        width: 90%; 
+    }
+    
+    #review-nav {
+        padding-top: 8%; /* More space from top */
+    }
+    
+    .reviews {
+        width: 90%;
+        gap: 3%; 
+        padding: 3%;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    
+    .reviews a {
+        font-size: 100%; 
+    }
+    
+    #game-row {
+        padding-top: 5%;
+    }
+    
+    #game-row h2 {
+        font-size: 150%; 
+        padding-left: 5%;
+        text-align: center;
+    }
+    
+    #game-row-background {
+        padding: 5%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #gamepic {
+        width: 80%; 
+        padding-left: 0;
+        margin-bottom: 15px; 
+    }
+
+    #arrow-prev, #arrow-next {
+        font-size: 2em; 
+        padding: 8px 15px;
+    }
+
+    #arrow-prev {
+        left: 5%;
+        top: 95%; 
+    }
+
+    #arrow-next {
+        right: 5%;
+        top: 95%; 
+    }
 }

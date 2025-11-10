@@ -5,16 +5,17 @@
 }
 
 .quotes {
-	flex: 1;
+    flex: 1;
     flex-direction: column;
     gap: 20px;
-	margin: auto;
-	margin-left: 6%;
-	width: 40%;
-
-	position: absolute;
-	bottom: 27%;
-	h2{font-size: 50px; color: white; font-family:Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif; font-weight: 600;}
+    margin: auto;
+    margin-left: 6%;
+    width: 40%;
+    
+    position: absolute;
+    bottom: 26%; 
+    left: 0; 
+	h1{font-size: 50px; color: white; font-family:Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif; font-weight: 600;}
 	p{color:white; font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;}
 }
 
@@ -25,15 +26,16 @@
 }
 
 .circle {
-	width: 200px; 
-	height: 200px; 
-	background-color: #9ccfcb;
-	border-radius: 50%;
-
-	position: absolute;
-	bottom: 35%;
-	right: 7%;
+    width: 200px; 
+    height: 200px; 
+    background-color: #9ccfcb;
+    border-radius: 50%;
+    
+    position: absolute;
+    bottom: 30%; /* Changed from 35% to align better with text */
+    right: 10%; /* Changed from 7% - a bit more breathing room */
 }
+
 /*section 2 of home*/
 .home-gameplay { 
 	flex: 2;
@@ -45,18 +47,71 @@
 }
 
 .h2-home{
-	display: flex;
-	flex-wrap: wrap;
-	flex: 1;
-	padding-top: 20%;
-	padding-left: 15%;
-	color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-top: 15%; /* Changed from 20% - less empty space */
+    padding-left: 10%; /* Changed from 15% - better alignment */
+    color: white;
 }
 
 .h2-chart{
-	display: flex;
-	flex-wrap: wrap;
-	img{width: 600px;}
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+    padding-right: 5%; 
+}
+
+featured-games {
+    padding: 80px 10%;
+    background-color: #1a1a2e;
+}
+
+.featured-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.featured-header h2 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.featured-header p {
+    color: #b0b0b0;
+    font-size: 18px;
+}
+
+.game-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+}
+
+.game-card h3 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #f0f0f0;
+    font-size: 16px;
 }
 
 /*Backgound*/

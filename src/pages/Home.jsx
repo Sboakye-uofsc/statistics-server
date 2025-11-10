@@ -7,7 +7,7 @@ const Home = () => {
 			<div className="home-container">
 				<div id="main-page-quotes">
 					<section className="quotes">
-						<h2>Where Statistics Meets Gaming</h2>
+						<h1>Where Statistics Meets Gaming</h1>
 						<p> A public gaming statistics platform that tracks and analyzes player habits across various games. View the latest percentages and graphs for all your favorite video games.</p>
 					</section>
 

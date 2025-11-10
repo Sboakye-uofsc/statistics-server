@@ -54,3 +54,50 @@
     right:2%;
 	top: 42%;
 }
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 85%; /* Changed from fixed 1310px */
+        height: auto; /* Changed from 300px */
+        padding: 5%; /* Increased padding */
+    }
+    
+    .container h2 {
+        font-size: 150%; /* Smaller from 200% */
+        text-align: center; /* Center on mobile */
+        align-self: center; /* Center alignment */
+        padding-left: 0;
+    }
+    
+    .games-reviews {
+        width: 100%; /* Full width on mobile */
+    }
+    
+    .games-reviews img { 
+        width: 200px; /* Smaller from 300px */
+        height: 100px; /* Smaller from 150px */
+    }
+    
+    .content-box {
+        gap: 20px; /* Reduced from 35px */
+    }
+    
+    .card {
+        width: 220px; /* Smaller from 500px */
+    }
+    
+    #arrow-prev, #arrow-next {
+        font-size: 2em; /* Smaller from 3em */
+        padding: 8px 15px; /* Smaller padding */
+    }
+    
+    #arrow-prev {
+        left: 2%;
+        top: 50%;
+    }
+    
+    #arrow-next {
+        right: 2%;
+        top: 50%;
+    }
+}
