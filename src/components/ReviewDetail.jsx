@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 
 const ReviewDetail = () => {
   const [review, setReview] = useState(null);
-  const { id } = useParams(); // Get the ID from the URL
+  const { id } = useParams();
 
   useEffect(() => {
     // Fetch review based on the ID from the URL
-    fetch(`http://localhost:3001/api/Review/${id}`)
+    fetch(`https://statistics-backend-jjpb.onrender.com/api/Review/${id}`)
       .then(response => response.json())
       .then(data => {
         setReview(data);
