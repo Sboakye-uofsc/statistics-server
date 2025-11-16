@@ -1,7 +1,4 @@
-// API helper functions for comments
-const API_BASE_URL = 'http://localhost:3001/api';
-
-//HUGE SHOOT OUT TO this YouTube Channel Monsterlessons Academy for helping
+const API_BASE_URL = 'https://statistics-backend-jjpb.onrender.com/api';
 
 export const getComments = async (reviewId) => {
   try {
