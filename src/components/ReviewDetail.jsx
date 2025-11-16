@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Comments from './Comments';
 
+//Hi 
+
 const ReviewDetail = () => {
   const [review, setReview] = useState(null);
   const { id } = useParams();
