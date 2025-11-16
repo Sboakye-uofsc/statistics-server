@@ -1,0 +1,6 @@
+.review-info {
+	flex: 2;
+	display: flex;
+	flex-wrap: wrap;
+}
+

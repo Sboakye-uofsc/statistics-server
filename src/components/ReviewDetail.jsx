@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Comments from './Comments';
 
 const ReviewDetail = () => {
   const [review, setReview] = useState(null);
@@ -27,6 +28,9 @@ const ReviewDetail = () => {
       <p>Rating: {review.rating}</p>
       <p>{review.description}</p>
       <p>Review: {review.reviews[0]}</p>
+	  <section>
+		<Comments/>
+	  </section>
     </main>
   );
 };

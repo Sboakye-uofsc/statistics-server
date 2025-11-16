@@ -1,0 +1,143 @@
+.comments {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.comments-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.comments-container {
+  margin-top: 2rem;
+}
+
+/* Comment Form */
+.comment-form-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.comment-form-textarea:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.comment-form-textarea::placeholder {
+  color: #999;
+}
+
+.comment-form-button {
+  margin-top: 0.75rem;
+  padding: 0.625rem 1.5rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form-button:hover:not(:disabled) {
+  background-color: #357abd;
+}
+
+.comment-form-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Individual Comment */
+.comment {
+  background-color: #f9f9f9;
+  border-left: 3px solid #4a90e2;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+
+
+.comment-body {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.comment-reply-button {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.comment-reply-button:hover {
+  color: #357abd;
+  text-decoration: underline;
+}
+
+/* Nested Replies */
+.replies {
+  border-left: 2px solid #e0e0e0;
+  padding-left: 1rem;
+}
+
+.replies .comment {
+  background-color: #ffffff;
+}
+
+/* Loading State */
+.comments div {
+  padding: 1%;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comments {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .replies {
+    margin-left: 1rem;
+    padding-left: 0.75rem;
+  }
+  
+  .comment-form-textarea {
+    min-height: 80px;
+  }
+}
