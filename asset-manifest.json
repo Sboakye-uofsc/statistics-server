@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/statistics-server/static/css/main.9445c6cd.css",
-    "main.js": "/statistics-server/static/js/main.b78dff44.js",
+    "main.js": "/statistics-server/static/js/main.b41d3fa0.js",
     "static/media/lotgame.jpg": "/statistics-server/static/media/lotgame.da212ae5131a3fbf4f8f.jpg",
     "static/media/peak.png": "/statistics-server/static/media/peak.b8a490eb7de0c28da7c8.png",
     "static/media/fake.png": "/statistics-server/static/media/fake.ebcb7f293fe9d295ce74.png",
@@ -14,10 +14,10 @@
     "static/media/Copy of StatBoard.png": "/statistics-server/static/media/Copy of StatBoard.b6ea28fc68912626c52d.png",
     "index.html": "/statistics-server/index.html",
     "main.9445c6cd.css.map": "/statistics-server/static/css/main.9445c6cd.css.map",
-    "main.b78dff44.js.map": "/statistics-server/static/js/main.b78dff44.js.map"
+    "main.b41d3fa0.js.map": "/statistics-server/static/js/main.b41d3fa0.js.map"
   },
   "entrypoints": [
     "static/css/main.9445c6cd.css",
-    "static/js/main.b78dff44.js"
+    "static/js/main.b41d3fa0.js"
   ]
 }
