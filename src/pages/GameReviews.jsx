@@ -18,7 +18,7 @@ const GameReviews = () => {
 				const response = await axios.get("http://localhost:3001/api/Review");
 				setGames(response.data);
 			} catch (err) {
-				console.error("Failed to load game data:", err);
+				console.error("Failed to load game data:");
 			}
 		};
 

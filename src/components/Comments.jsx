@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import CommentForm from "./CommentForm";
-import { getComments, createComment } from "./api";
+import { getComments, createComment, deleteComment as deleteCommentAPI, updateComment as updateCommentAPI } from "./api";
 import "./../css/Comments.css";
 
 //HUGE SHOOT OUT TO this YouTube Channel Monsterlessons Academy for helping
 
-const Comment = ({ comment, replies, currentUserId, addComment }) => {
+const Comment = ({ comment, replies, currentUserId, addComment, deleteComment, updateComment}) => {
 	const [showReplyForm, setShowReplyForm] = useState(false);
+	const [showEditForm, setShowEditForm] = useState(false);
 	const canReply = Boolean(currentUserId);
 	const createdAt = new Date(comment.createdAt).toLocaleDateString();
 	
@@ -19,14 +20,40 @@ const Comment = ({ comment, replies, currentUserId, addComment }) => {
 			<div className="comment-body">{comment.body}</div>
 			<div className="comment-actions">
 				{canReply && (
-					<button 
-						className="comment-reply-button"
-						onClick={() => setShowReplyForm(!showReplyForm)}
+					<div
+					className="comment-reply-button"
+					onClick={() => setShowReplyForm(!showReplyForm)}
 					>
-						Reply
-					</button>
+					Reply
+					</div>
+				)}
+				{currentUserId === comment.userId && (
+					<>
+						<div 
+							className="comment-edit-button"
+							onClick={() => setShowEditForm(!showEditForm)}
+						>
+							Edit
+						</div>
+						<div 
+							className="comment-delete-button"
+							onClick={() => deleteComment(comment.id)}
+						>
+							Delete
+						</div>
+					</>
 				)}
 			</div>
+			{showEditForm && (
+				<CommentForm 
+					submitLabel="Update"
+					handleSubmit={(text) => {
+					updateComment(text, comment.id);
+					setShowEditForm(false);
+					}}
+					initialText={comment.body}
+				/>
+			)}
 			{showReplyForm && (
 				<CommentForm 
 					submitLabel="Reply"
@@ -45,6 +72,7 @@ const Comment = ({ comment, replies, currentUserId, addComment }) => {
 							replies={[]}
 							currentUserId={currentUserId}
 							addComment={addComment}
+							deleteComment={deleteComment}
 						/>
 					))}
 				</div>
@@ -55,6 +83,7 @@ const Comment = ({ comment, replies, currentUserId, addComment }) => {
 
 const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) => {
 	const [backendComments, setBackendComments] = useState([]);
+	const [activeComment, setActiveComment] = useState(null);
 	const [loading, setLoading] = useState(true);
 	
 	const rootComments = backendComments.filter(
@@ -75,6 +104,27 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 			console.error("Failed to add comment:", error);
 		}
 	};
+
+	const deleteComment = async (commentId) => {
+		try {
+			await deleteCommentAPI(reviewId, commentId); // Add reviewId here
+			setBackendComments(backendComments.filter(comment => comment.id !== commentId));
+		} catch (error) {
+			console.error("Failed to delete comment:", error);
+		}
+	};
+
+	const updateComment = async (text, commentId) => {
+		try {
+			const updatedComment = await updateCommentAPI(reviewId, commentId, text);
+			const updatedComments = backendComments.map(comment => 
+			comment.id === commentId ? updatedComment : comment
+			);
+			setBackendComments(updatedComments);
+		} catch (error) {
+			console.error("Failed to update comment:", error);
+		}
+	};
 	
 	useEffect(() => {
 		const fetchComments = async () => {
@@ -83,7 +133,7 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 			setBackendComments(data);
 			setLoading(false);
 		};
-		
+	
 		fetchComments();
 	}, [reviewId]);
 	
@@ -103,6 +153,8 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 						replies={getReplies(rootComment.id)}
 						currentUserId={currentUserId}
 						addComment={addComment}
+						deleteComment={deleteComment}
+						updateComment={updateComment}
 					/>
 				))}
 			</div>

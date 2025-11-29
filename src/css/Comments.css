@@ -78,8 +78,6 @@
   font-size: 0.95rem;
 }
 
-
-
 .comment-body {
   color: #444;
   line-height: 1.6;
@@ -106,6 +104,40 @@
 
 .comment-reply-button:hover {
   color: #357abd;
+  text-decoration: underline;
+}
+
+/* Detele Comment*/
+.comment-delete-button {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.comment-delete-button:hover {
+  color: #c0392b;
+  text-decoration: underline;
+}
+
+/*Edit Comment*/
+.comment-edit-button {
+  background: none;
+  border: none;
+  color: #f39c12;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.comment-edit-button:hover {
+  color: #e67e22;
   text-decoration: underline;
 }
 
