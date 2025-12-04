@@ -37,7 +37,7 @@ const Comment = ({ comment, replies, currentUserId, addComment, deleteComment, u
 						</div>
 						<div 
 							className="comment-delete-button"
-							onClick={() => deleteComment(comment.id)}
+							onClick={() => deleteComment(comment._id)}
 						>
 							Delete
 						</div>
@@ -48,7 +48,7 @@ const Comment = ({ comment, replies, currentUserId, addComment, deleteComment, u
 				<CommentForm 
 					submitLabel="Update"
 					handleSubmit={(text) => {
-					updateComment(text, comment.id);
+					updateComment(text, comment._id);
 					setShowEditForm(false);
 					}}
 					initialText={comment.body}
@@ -58,7 +58,7 @@ const Comment = ({ comment, replies, currentUserId, addComment, deleteComment, u
 				<CommentForm 
 					submitLabel="Reply"
 					handleSubmit={(text) => {
-						addComment(text, comment.id);
+						addComment(text, comment._id);
 						setShowReplyForm(false);
 					}}
 				/>
@@ -108,7 +108,7 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 	const deleteComment = async (commentId) => {
 		try {
 			await deleteCommentAPI(reviewId, commentId); // Add reviewId here
-			setBackendComments(backendComments.filter(comment => comment.id !== commentId));
+			setBackendComments(backendComments.filter(comment => comment._id !== commentId));
 		} catch (error) {
 			console.error("Failed to delete comment:", error);
 		}
@@ -118,7 +118,7 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 		try {
 			const updatedComment = await updateCommentAPI(reviewId, commentId, text);
 			const updatedComments = backendComments.map(comment => 
-			comment.id === commentId ? updatedComment : comment
+			comment._id === commentId ? updatedComment : comment
 			);
 			setBackendComments(updatedComments);
 		} catch (error) {
@@ -148,7 +148,7 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 			<div className="comments-container">
 				{rootComments.map(rootComment => (
 					<Comment
-						key={rootComment.id}
+						key={rootComment._id}
 						comment={rootComment}
 						replies={getReplies(rootComment.id)}
 						currentUserId={currentUserId}

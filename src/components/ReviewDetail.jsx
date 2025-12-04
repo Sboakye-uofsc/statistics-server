@@ -65,7 +65,11 @@ const ReviewDetail = () => {
       </div>
 
       <section className="comments-section">
-        <Comments />
+		<Comments 
+			reviewId={id} 
+			currentUserId="user123" 
+			currentUsername="Anonymous"
+		/>
       </section>
     </div>
   );
