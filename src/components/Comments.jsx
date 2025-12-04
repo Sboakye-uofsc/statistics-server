@@ -48,8 +48,8 @@ const Comment = ({ comment, replies, currentUserId, addComment, deleteComment, u
 				<CommentForm 
 					submitLabel="Update"
 					handleSubmit={(text) => {
-					updateComment(text, comment._id);
-					setShowEditForm(false);
+						updateComment(text, comment._id);
+						setShowEditForm(false);
 					}}
 					initialText={comment.body}
 				/>
@@ -67,12 +67,13 @@ const Comment = ({ comment, replies, currentUserId, addComment, deleteComment, u
 				<div className="replies">
 					{replies.map(reply => (
 						<Comment
-							key={reply.id}
+							key={reply._id}
 							comment={reply}
 							replies={[]}
 							currentUserId={currentUserId}
 							addComment={addComment}
 							deleteComment={deleteComment}
+							updateComment={updateComment}
 						/>
 					))}
 				</div>
@@ -98,16 +99,19 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 	
 	const addComment = async (text, parentId = null) => {
 		try {
+			console.log('Attempting to add comment...'); // Debug
 			const comment = await createComment(reviewId, text, parentId, currentUserId, currentUsername);
+			console.log('Comment created successfully:', comment); // Debug
 			setBackendComments([comment, ...backendComments]);
 		} catch (error) {
 			console.error("Failed to add comment:", error);
+			alert("Failed to post comment. Please try again.");
 		}
 	};
 
 	const deleteComment = async (commentId) => {
 		try {
-			await deleteCommentAPI(reviewId, commentId); // Add reviewId here
+			await deleteCommentAPI(reviewId, commentId);
 			setBackendComments(backendComments.filter(comment => comment._id !== commentId));
 		} catch (error) {
 			console.error("Failed to delete comment:", error);
@@ -118,7 +122,7 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 		try {
 			const updatedComment = await updateCommentAPI(reviewId, commentId, text);
 			const updatedComments = backendComments.map(comment => 
-			comment._id === commentId ? updatedComment : comment
+				comment._id === commentId ? updatedComment : comment
 			);
 			setBackendComments(updatedComments);
 		} catch (error) {
@@ -128,13 +132,23 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 	
 	useEffect(() => {
 		const fetchComments = async () => {
-			setLoading(true);
-			const data = await getComments(reviewId);
-			setBackendComments(data);
-			setLoading(false);
+			try {
+				console.log('Fetching comments for review:', reviewId); // Debug
+				const data = await getComments(reviewId);
+				console.log('Comments fetched:', data); // Debug
+				setBackendComments(data);
+				setLoading(false);
+			} catch (error) {
+				console.error("Failed to fetch comments:", error);
+				setLoading(false);
+			}
 		};
-	
+
 		fetchComments();
+		
+		const interval = setInterval(fetchComments, 5000);
+		
+		return () => clearInterval(interval);
 	}, [reviewId]);
 	
 	if (loading) {
@@ -150,7 +164,7 @@ const Comments = ({ reviewId, currentUserId, currentUsername = "Anonymous" }) =>
 					<Comment
 						key={rootComment._id}
 						comment={rootComment}
-						replies={getReplies(rootComment.id)}
+						replies={getReplies(rootComment._id)}
 						currentUserId={currentUserId}
 						addComment={addComment}
 						deleteComment={deleteComment}
